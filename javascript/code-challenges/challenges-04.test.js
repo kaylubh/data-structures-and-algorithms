@@ -38,19 +38,11 @@ const addPeople = (arr) => {
 };
 
 const newStuff = { ...stuff, cars: [...stuff.cars, 'Honda'] };
-console.log(newStuff);
 
 const stateObject = {
   people: [...people],
   stuff: { ...stuff }
 };
-console.log(stateObject);
-
-const newSate = {
-  people: ['Odie', ...people, 'Garfield'],
-  stuff: { ...stuff, cars: [...stuff.cars, 'Honda'] }
-};
-console.log(newSate);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -75,6 +67,10 @@ const setState = (arr) => {
   return stateObject;
 };
 
+const newSate = {
+  people: ['Odie', ...people, 'Garfield'],
+  stuff: { ...stuff, cars: [...stuff.cars, 'Honda'] }
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
