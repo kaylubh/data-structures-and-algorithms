@@ -66,7 +66,11 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  const updatedNumbers = [];
+  Object.entries(obj).forEach(entry => {
+    updatedNumbers.push(`${entry[0]}: ${entry[1]}`);
+  });
+  return updatedNumbers;
 };
 
 
