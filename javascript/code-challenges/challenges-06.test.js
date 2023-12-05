@@ -292,7 +292,13 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  // Solution code here...
+  const filteredArray = arr.filter( (character) => character.name.includes('a'));
+  return filteredArray.reduce( (childrensNames, character) => {
+    if (Array.isArray(character.children)) {
+      childrensNames.push(...character.children);
+    }
+    return childrensNames;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
