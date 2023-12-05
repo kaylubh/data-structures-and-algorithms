@@ -228,7 +228,12 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce( (primeCount, value) => {
+    if (isPrime(value)) {
+      primeCount++;
+    }
+    return primeCount;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
