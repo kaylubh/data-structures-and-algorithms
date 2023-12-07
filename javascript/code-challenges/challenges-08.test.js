@@ -127,7 +127,16 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach((ingredient) => {
+    const removeAmount = ingredient.slice(ingredient.indexOf(' '));
+    result.push(removeAmount);
+    // const removeUnit = removeAmount.slice(removeAmount.indexOf(' '));
+    // const food = removeUnit.slice(removeUnit.indexOf(' '));
+  });
+  result.forEach((ingredient) => {
+    const removeUnit = ingredient.slice(ingredient.indexOf(' '));
+    console.log(removeUnit);
+  });
   return result;
 };
 
