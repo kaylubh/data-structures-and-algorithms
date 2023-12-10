@@ -87,13 +87,11 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  let hourTotals = 0;
+  let hourTotals = hoursOpen.map((hour) => 0);
   for (let i = 0; i < stores.length; i++) {
-    let hourTotal;
+
     for (let j = 0; j < stores[i].length; j++) {
-      const currentStoreHour = stores[i][j];
-      hourTotal += currentStoreHour;
-      hourTotals.push(hourTotal);
+      hourTotals[j] += stores[i][j];
     }
   }
   return hourTotals;
