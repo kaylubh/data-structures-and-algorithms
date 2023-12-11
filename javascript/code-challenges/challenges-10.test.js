@@ -274,7 +274,23 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  const rows = str.split('\n');
+  const table = [];
+  for (let i = 0; i < rows.length; i++) {
+    const rowArr = rows[i].split(',');
+    table.push(rowArr);
+  }
+
+  const rowSums = [];
+  table.forEach(row => {
+    let rowSum = 0;
+    for (let i = 0; i < row.length; i++) {
+      rowSum += parseInt(row[i]);
+    }
+    rowSums.push(rowSum);
+  });
+
+  return rowSums;
 };
 
 /* ------------------------------------------------------------------------------------------------
