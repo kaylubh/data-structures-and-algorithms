@@ -7,7 +7,7 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-  let longestIdx;
+  let longestIdx = -1;
   let longestStrLength = 0;
 
   arr.forEach((str, idx) => {
