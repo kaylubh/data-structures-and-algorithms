@@ -128,7 +128,13 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  let allContain = true;
+  arr.forEach(str => {
+    if (!str.includes(target)) {
+      allContain = false;
+    }
+  });
+  return allContain;
 };
 
 /* ------------------------------------------------------------------------------------------------
