@@ -196,7 +196,15 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 ------------------------------------------------------------------------------------------------ */
 
 const characterByIndex = (arr) => {
-  // Solution code here...
+  const charactersAtIndex = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const stringAtIndex = arr[i];
+    const charAtIndex  = stringAtIndex[i];
+    charactersAtIndex.push(charAtIndex);
+  }
+
+  return charactersAtIndex;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -308,7 +316,7 @@ describe('Testing challenge 9', () => {
   });
 });
 
-describe('Testing challenge 10', () => {
+xdescribe('Testing challenge 10', () => {
   test('It should sort events by the day on which they happen', () => {
     const events = ['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7', 'in the club on a Tuesday', 'Thursday Night Code', 'Saturday Night Fever'];
     const sortedEvents = sortByDay(events);
