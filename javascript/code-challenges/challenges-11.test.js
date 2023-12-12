@@ -150,7 +150,14 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  const rostersWithoutBrook = [];
+
+  arr.forEach(roster => {
+    const courseRoster = roster.filter(person => !(person.includes('Brook')));
+    rostersWithoutBrook.push(courseRoster);
+  });
+
+  return rostersWithoutBrook;
 };
 
 /* ------------------------------------------------------------------------------------------------
