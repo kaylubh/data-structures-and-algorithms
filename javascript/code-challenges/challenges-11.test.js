@@ -62,7 +62,13 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
+  const standardizedPhoneNumbers = arr.map(num => {
+    const areaCode = num.substring(1, 4);
+    const firstThree = num.substring(6, 9);
+    const lastFour = num.substring(10);
+    return (areaCode + firstThree + lastFour);
+  });
+  return standardizedPhoneNumbers;
 };
 
 /* ------------------------------------------------------------------------------------------------
