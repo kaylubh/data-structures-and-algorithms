@@ -19,7 +19,14 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-  // Solution code here...
+  const objPropsList = [];
+
+  for (const property in obj) {
+    const listItem = `<li>${property}: ${obj[property]}</li>`;
+    objPropsList.push(listItem);
+  }
+
+  return objPropsList;
 }
 
 /* ------------------------------------------------------------------------------------------------
