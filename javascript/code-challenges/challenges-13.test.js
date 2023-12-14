@@ -131,7 +131,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  const regexBeginsWithAToJ = /[A-J]/;
+
+  const filteredArray = arr.filter(city => regexBeginsWithAToJ.test(city[0]));
+
+  return filteredArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
