@@ -2,6 +2,10 @@
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
 
+## Python Table of Contents
+
+1. [Array Reverse](/python/docs/array_reverse/README.md)
+
 ## Repository Quick Tour and Usage
 
 ### 301 Code Challenges
