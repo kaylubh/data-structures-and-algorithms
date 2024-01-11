@@ -6,6 +6,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 
 1. [Array Reverse](/python/docs/array_reverse/README.md)
 1. [Array Insert Shift](/python/docs/array_insert_shift/README.md)
+1. [Array Binary Search](/python/docs/array_binary_search/README.md)
 
 ## Repository Quick Tour and Usage
 
