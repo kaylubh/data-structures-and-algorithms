@@ -9,7 +9,10 @@ class LinkedList:
     def __str__(self):
         pass
 
-    def insert(self):
+    def insert(self, value):
+        pass
+
+    def includes(self, value):
         pass
 
 class Node:
