@@ -4,13 +4,25 @@ class LinkedList:
     """
 
     def __init__(self):
-        # initialization here
+        self.head = None
+
+    def __str__(self):
         pass
 
-    def some_method(self):
-        # method body here
+    def insert(self):
         pass
 
+class Node:
+    """
+
+    """
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+    def __str__(self):
+        pass
 
 class TargetError:
     pass
