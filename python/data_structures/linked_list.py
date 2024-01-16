@@ -1,3 +1,15 @@
+class Node:
+    """
+
+    """
+
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+    def __str__(self):
+        pass
+
 class LinkedList:
     """
     Put docstring here
@@ -10,21 +22,11 @@ class LinkedList:
         pass
 
     def insert(self, value):
-        pass
+        new_node = Node(value)
+        new_node.next = self.head
+        self.head = new_node
 
     def includes(self, value):
-        pass
-
-class Node:
-    """
-
-    """
-
-    def __init__(self, value):
-        self.value = value
-        self.next = None
-
-    def __str__(self):
         pass
 
 class TargetError:
