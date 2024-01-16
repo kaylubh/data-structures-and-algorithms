@@ -23,7 +23,7 @@ class LinkedList:
         current_node = self.head
         while current_node:
             current_node_string = current_node.__str__()
-            linked_list_string += f'{{ {current_node_string} }} -> '
+            linked_list_string += f"{{ {current_node_string} }} -> "
             current_node = current_node.next
         linked_list_string += 'NULL'
         return linked_list_string
@@ -34,7 +34,12 @@ class LinkedList:
         self.head = new_node
 
     def includes(self, value):
-        pass
+        current_node = self.head
+        while current_node:
+            if current_node.value == value:
+                return True
+            current_node = current_node.next
+        return False
 
 class TargetError:
     pass
