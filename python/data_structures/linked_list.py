@@ -1,6 +1,13 @@
 class Node:
     """
+    Represents a node in a singly linked list. Intended to be used with the LinkedList class which will instantiate nodes.
 
+    Attributes:
+      value (any): the value or data stored in the node
+      next (node object, default = None): the next node in the linked list
+
+    Methods:
+      __str__(): returns a string representation of the value of the node
     """
 
     def __init__(self, value):
@@ -12,7 +19,15 @@ class Node:
 
 class LinkedList:
     """
-    Put docstring here
+    Instantiates a singly linked list.
+
+    Attributes:
+      head (node object, default = None): the head node in the linked list
+
+    Methods:
+      __str__(): returns a string representation of the values of the nodes in the linked list
+      insert(value): no return, creates a new node at the head of the linked list and assigns the value attribute
+      includes(value): returns True or False if the input value exactly matches a node value in the linked list
     """
 
     def __init__(self):
