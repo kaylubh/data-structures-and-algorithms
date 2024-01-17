@@ -36,15 +36,19 @@ class LinkedList:
     def __str__(self):
         linked_list_string = ''
         current_node = self.head
+
         while current_node:
-            current_node_string = current_node.__str__()
+            current_node_string = str(current_node)
             linked_list_string += f"{{ {current_node_string} }} -> "
             current_node = current_node.next
+
         linked_list_string += 'NULL'
+
         return linked_list_string
 
     def insert(self, value):
         new_node = Node(value)
+
         new_node.next = self.head
         self.head = new_node
 
@@ -64,17 +68,17 @@ class LinkedList:
         new_node = Node(new_value)
         current_node = self.head
 
-        # raise exception if the linked list is empty
+        # raise exception if linked list is empty
         if current_node is None:
             raise TargetError("The linked list does not contain any nodes")
 
-        # if head is the target node
+        # if head is target node
         if current_node.value == target_node:
             new_node.next = current_node
             self.head = new_node
             return
 
-        # traverse the linked list to find the target node
+        # traverse linked list to find target node
         while current_node.next:
             if current_node.next.value == target_node:
                 new_node.next = current_node.next
@@ -91,11 +95,11 @@ class LinkedList:
         new_node = Node(new_value)
         current_node = self.head
 
-        # raise exception if the linked list is empty
+        # raise exception if linked list is empty
         if current_node is None:
             raise TargetError("The linked list does not contain any nodes")
 
-        # traverse the linked list to find the target node
+        # traverse linked list to find target node
         while current_node:
             if current_node.value == target_node:
                 new_node.next = current_node.next
@@ -108,12 +112,14 @@ class LinkedList:
         # raise exception if target not found
         raise TargetError("Target node not found in the linked list")
 
-    def includes(self, value):
+    def includes(self, target_value):
         current_node = self.head
+
         while current_node:
-            if current_node.value == value:
+            if current_node.value == target_value:
                 return True
             current_node = current_node.next
+
         return False
 
 class TargetError(Exception):
