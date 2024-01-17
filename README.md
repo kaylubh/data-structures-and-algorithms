@@ -7,6 +7,9 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 1. [Array Reverse](/python/docs/array_reverse/README.md)
 1. [Array Insert Shift](/python/docs/array_insert_shift/README.md)
 1. [Array Binary Search](/python/docs/array_binary_search/README.md)
+1. [Sum Matrix Rows](/python/docs/sum_matrix_rows/README.md)
+1. [Linked Lists](/python/data_structures/linked_list.py)
+1. [Linked Lists Insertions](/python/docs/linked_list_insertions/README.md)
 
 ## Repository Quick Tour and Usage
 
