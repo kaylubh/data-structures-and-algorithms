@@ -3,11 +3,11 @@ class Node:
     Represents a node in a singly linked list. Intended to be used with the LinkedList class which will instantiate nodes.
 
     Attributes:
-      value (any): the value or data stored in the node
-      next (node object, default = None): the next node in the linked list
+      value (any): value or data stored in node
+      next (node object, default = None): next node in linked list
 
     Methods:
-      __str__(): returns a string representation of the value of the node
+      __str__(): returns a string representation of value of node
     """
 
     def __init__(self, value):
@@ -22,12 +22,15 @@ class LinkedList:
     Instantiates a singly linked list.
 
     Attributes:
-      head (node object, default = None): the head node in the linked list
+      head (node object, default = None): the head node in linked list
 
     Methods:
-      __str__(): returns a string representation of the values of the nodes in the linked list
-      insert(value): no return, creates a new node at the head of the linked list and assigns the value attribute
-      includes(value): returns True or False if the input value exactly matches a node value in the linked list
+      __str__(): returns a string representation of values of nodes in linked list
+      insert(value): no return, creates new node at head of linked list and assigns value attribute
+      append(value): no return, creates new node at tail of linked list and assigns value attribute
+      insert_before(target_node, new_value): no return, creates new node before target_node of linked list and assigns value attribute
+      insert_after(target_node, new_value): no return, creates new node after target_node of linked list and assigns value attribute
+      includes(value): returns True or False if input value exactly matches a node value in linked list
     """
 
     def __init__(self):
