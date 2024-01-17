@@ -83,6 +83,23 @@ class LinkedList:
         # raise exception if target not found
         raise TargetError("Target node not found in the linked list")
 
+    def insert_after(self, target_node, new_value):
+        new_node = Node(new_value)
+        current_node = self.head
+
+        # traverse the linked list to find the target node
+        while current_node:
+            if current_node.value == target_node:
+                new_node.next = current_node.next
+                current_node.next = new_node
+                return
+
+            else:
+                current_node = current_node.next
+
+        # raise exception if target not found
+        raise TargetError("Target node not found in the linked list")
+
     def includes(self, value):
         current_node = self.head
         while current_node:
