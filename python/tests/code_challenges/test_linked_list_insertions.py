@@ -1,9 +1,8 @@
 import pytest
 from data_structures.linked_list import LinkedList, TargetError
 
-### starter tests ###
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_append():
     linked_list = LinkedList()
 
@@ -16,7 +15,7 @@ def test_append():
     assert str(linked_list) == "{ banana } -> { apple } -> { cucumber } -> NULL"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_before():
     linked_list = LinkedList()
 
@@ -29,7 +28,7 @@ def test_insert_before():
     assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
 
-@pytest.mark.skip("TODO")
+# @pytest.mark.skip("TODO")
 def test_insert_before_first():
     linked_list = LinkedList()
 
@@ -88,52 +87,48 @@ def test_insert_after_missing():
     with pytest.raises(TargetError):
         linked_list.insert_after("radish", "zucchinni")
 
-### end starter tests ###
 
-### new tests ###
+# @pytest.mark.skip("TODO")
+# def test_append():
+#     linked_list = LinkedList()
+#     linked_list.insert("apple")
+#     linked_list.insert("banana")
 
-# @pytest.mark.skip("append")
-def test_append():
-    linked_list = LinkedList()
-    linked_list.insert("apple")
-    linked_list.insert("banana")
+#     assert str(linked_list) == "{ banana } -> { apple } -> NULL"
 
-    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
+#     linked_list.append("cucumber")
 
-    linked_list.append("cucumber")
+#     assert str(linked_list) == "{ banana } -> { apple } -> { cucumber } -> NULL"
 
-    assert str(linked_list) == "{ banana } -> { apple } -> { cucumber } -> NULL"
+# @pytest.mark.skip("TODO")
+# def test_append_empty():
+#     linked_list = LinkedList()
 
-# @pytest.mark.skip("append")
-def test_append_empty():
-    linked_list = LinkedList()
+#     linked_list.append("apple")
 
-    linked_list.append("apple")
+#     assert str(linked_list) == "{ apple } -> NULL"
 
-    assert str(linked_list) == "{ apple } -> NULL"
+# @pytest.mark.skip("TODO")
+# def test_insert_before():
+#     linked_list = LinkedList()
+#     linked_list.insert("apple")
+#     linked_list.insert("banana")
 
-@pytest.mark.skip("insert_before")
-def test_insert_before():
-    linked_list = LinkedList()
-    linked_list.insert("apple")
-    linked_list.insert("banana")
+#     assert str(linked_list) == "{ banana } -> { apple } -> NULL"
 
-    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
+#     linked_list.insert_before("cucumber", "apple")
 
-    linked_list.insert_before("cucumber", "apple")
+#     assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
-    assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
+# @pytest.mark.skip("TODO")
+# def test_insert_before():
+#     linked_list = LinkedList()
+#     linked_list.insert("apple")
+#     linked_list.insert("banana")
 
-@pytest.mark.skip("insert_before")
-def test_insert_before():
-    linked_list = LinkedList()
-    linked_list.insert("apple")
-    linked_list.insert("banana")
+#     assert str(linked_list) == "{ banana } -> { apple } -> NULL"
 
-    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
+#     linked_list.insert_before("cucumber", "apple")
 
-    linked_list.insert_before("cucumber", "apple")
+#     assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
 
-    assert str(linked_list) == "{ banana } -> { cucumber } -> { apple } -> NULL"
-
-### end new tests ###

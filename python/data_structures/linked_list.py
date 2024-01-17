@@ -48,6 +48,12 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+    def insert_before(self, value, new_value):
+        new_node = Node(new_value)
+        current_node = self.head
+
+
+
     def append(self, value):
         new_node = Node(value)
         current_node = self.head
@@ -56,6 +62,7 @@ class LinkedList:
             while current_node.next:
                 current_node = current_node.next
             current_node.next = new_node
+
         else:
             self.head = new_node
 
