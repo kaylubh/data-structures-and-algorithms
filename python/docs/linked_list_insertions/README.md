@@ -71,3 +71,5 @@ Insert After
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 To test run `pytest -k linked_list` from the `~/python` directory.
+
+[View Code](../../data_structures/linked_list.py)
