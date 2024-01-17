@@ -64,6 +64,10 @@ class LinkedList:
         new_node = Node(new_value)
         current_node = self.head
 
+        # raise exception if the linked list is empty
+        if current_node is None:
+            raise TargetError("The linked list does not contain any nodes")
+
         # if head is the target node
         if current_node.value == target_node:
             new_node.next = current_node
@@ -86,6 +90,10 @@ class LinkedList:
     def insert_after(self, target_node, new_value):
         new_node = Node(new_value)
         current_node = self.head
+
+        # raise exception if the linked list is empty
+        if current_node is None:
+            raise TargetError("The linked list does not contain any nodes")
 
         # traverse the linked list to find the target node
         while current_node:
