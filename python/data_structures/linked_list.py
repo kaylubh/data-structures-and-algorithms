@@ -31,6 +31,7 @@ class LinkedList:
       insert_before(target_node, new_value): no return, creates new node before target_node of linked list and assigns value attribute
       insert_after(target_node, new_value): no return, creates new node after target_node of linked list and assigns value attribute
       includes(value): returns True or False if input value exactly matches a node value in linked list
+      kth_from_end(k): returns value of node k places from tail of linked list
     """
 
     def __init__(self):
@@ -124,6 +125,30 @@ class LinkedList:
             current_node = current_node.next
 
         return False
+
+    def kth_from_end(self, k):
+        tail_pointer = self.head
+        k_pointer = self.head
+
+        # exceptions
+        if tail_pointer is None: # linked list is empty
+            raise TargetError("The linked list does not contain any nodes")
+        if k < 0: # k is negative number
+            raise TargetError("Cannot use a negative k-th value")
+
+        # move tail pointer ahead "k" steps
+        for _ in range(k):
+            if tail_pointer.next:
+                tail_pointer = tail_pointer.next
+            else:
+                raise TargetError("Out of range, k is larger than number of nodes in linked list")
+
+        # traverse linked list with both pointers until end
+        while tail_pointer.next:
+            tail_pointer = tail_pointer.next
+            k_pointer = k_pointer.next
+
+        return k_pointer.value
 
 class TargetError(Exception):
     pass
