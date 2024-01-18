@@ -31,6 +31,7 @@ class LinkedList:
       insert_before(target_node, new_value): no return, creates new node before target_node of linked list and assigns value attribute
       insert_after(target_node, new_value): no return, creates new node after target_node of linked list and assigns value attribute
       includes(value): returns True or False if input value exactly matches a node value in linked list
+      kth_from_end(k): returns value of node k places from tail of linked list
     """
 
     def __init__(self):
