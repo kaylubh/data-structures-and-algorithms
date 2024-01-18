@@ -125,5 +125,27 @@ class LinkedList:
 
         return False
 
+    def kth_from_end(self, k):
+        tail_pointer = self.head
+        k_pointer = self.head
+
+        # exceptions
+        if tail_pointer is None: # linked list is empty
+            raise TargetError("The linked list does not contain any nodes")
+        if k < 0: # k is negative number
+            raise TargetError("Cannot use a negative k-th value")
+
+        for _ in range(k):
+            if tail_pointer.next:
+                tail_pointer = tail_pointer.next
+            else:
+                raise TargetError("Out of range, k is larger than number of nodes in linked list")
+
+        while tail_pointer.next:
+            tail_pointer = tail_pointer.next
+            k_pointer = k_pointer.next
+
+        return k_pointer.value
+
 class TargetError(Exception):
     pass
