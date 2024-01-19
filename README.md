@@ -11,6 +11,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 1. [Linked Lists](/python/data_structures/linked_list.py)
 1. [Linked Lists Insertions](/python/docs/linked_list_insertions/README.md)
 1. [Linked Lists k-th](/python/docs/linked_list_kth/README.md)
+1. [Linked Lists Zip](/python/docs/linked_list_zip/README.md)
 
 ## Repository Quick Tour and Usage
 
