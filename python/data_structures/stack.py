@@ -51,7 +51,7 @@ class Stack:
 
     def is_empty(self):
         """
-        Returns a boolean indicating whether the node is empty. True for not empty and False for empty.
+        Returns a boolean indicating whether the stack is empty. True for not empty and False for empty.
         """
 
         return self.top == None
