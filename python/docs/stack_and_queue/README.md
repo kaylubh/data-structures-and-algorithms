@@ -13,6 +13,9 @@ Both stack and queue have methods to allow for adding to and removing from their
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+- [Stack implementation](../../data_structures/stack.py)
+- [Queue implementation](../../data_structures/queue.py)
+
 1. Create and activate a virtual environment
 1. Install requirements
 1. Run `pytest -k test_stack.py` and `pytest -k test_queue.py`
