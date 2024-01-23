@@ -1,6 +1,6 @@
 class Node:
     """
-    Represents a node in a singly linked list. Intended to be used with the LinkedList class which will instantiate nodes.
+    Instantiates a node with the input value.
 
     Attributes:
       value (any): value or data stored in node
