@@ -15,10 +15,10 @@ class AnimalShelter:
 
         """
 
-        if animal.species is "Cat":
+        if animal.species == "Cat":
             self.cats_shelter.enqueue(animal)
 
-        if animal.species is "Dog":
+        if animal.species == "Dog":
             self.dogs_shelter.enqueue(animal)
 
     def dequeue(self, preference):
@@ -28,10 +28,10 @@ class AnimalShelter:
 
         dequeued_animal = None
 
-        if preference is "cat":
+        if preference == "cat":
             dequeued_animal = self.cats_shelter.dequeue()
 
-        if preference is "dog":
+        if preference == "dog":
             dequeued_animal = self.dogs_shelter.dequeue()
 
         return dequeued_animal
@@ -43,7 +43,7 @@ class Animal:
 
     def __init__(self, name):
         self.species = self.__class__.__name__
-        self.name = name
+        self.name = name or None
 
     def __str__(self):
         return f"Species: {self.species}, Name: {self.name}"
@@ -53,7 +53,7 @@ class Dog(Animal):
 
     """
 
-    def __init__(self, name):
+    def __init__(self, name = None):
         super().__init__(name)
 
 class Cat(Animal):
@@ -61,5 +61,5 @@ class Cat(Animal):
 
     """
 
-    def __init__(self, name):
+    def __init__(self, name = None):
         super().__init__(name)
