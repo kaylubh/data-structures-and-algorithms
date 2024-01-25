@@ -4,7 +4,7 @@ from data_structures.stack import Stack
 
 def multi_bracket_validation(string_to_validate):
     """
-
+    Evaluates a string and determines is all the brackets: (), [], and {} in the string are balanced. Balanced indicates if the brackets are opened and closed properly. Returns a boolean indicating whether the string is balanced.
     """
 
     is_balanced = True
