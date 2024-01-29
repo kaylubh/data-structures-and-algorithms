@@ -6,12 +6,12 @@ class BinaryTree:
         root (node object, default = None): root node of the tree
 
     Class Methods:
-        traverse(root_node, order):
+        traverse(root_node, order): Recursive function which conducts a depth traversal of the binary tree from a given root node and returns the values from the tree in the specified order.
 
     Instance Methods:
-        pre_order():
-        in_order():
-        post_order():
+        pre_order(): Returns a list of the values of the binary tree with the pre-order method. root >> left >> right
+        in_order(): Returns a list of the values of the binary tree with the in-order method. left >> root >> right
+        post_order(): Returns a list of the values of the binary tree with the post-order method. left >> right >> root
     """
 
     def __init__(self):
