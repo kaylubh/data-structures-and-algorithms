@@ -6,7 +6,7 @@ class BinaryTree:
         root (node object, default = None): root node of the tree
 
     Class Methods:
-        traverse(root_node, order): Recursive function which conducts a depth traversal of the binary tree from a given root node and returns the values from the tree in the specified order.
+        depth_traversal(root_node, order): Recursive function which conducts a depth traversal of the binary tree from a given root node and returns the values from the tree in the specified order.
 
     Instance Methods:
         pre_order(): Returns a list of the values of the binary tree with the pre-order method. root >> left >> right
@@ -18,7 +18,7 @@ class BinaryTree:
         self.root = None
 
     @classmethod
-    def traverse(cls, root_node, order):
+    def depth_traversal(cls, root_node, order):
         """
         Recursive function which conducts a depth traversal of the binary tree from a given root node and returns the values from the tree in the specified order.
 
@@ -34,8 +34,8 @@ class BinaryTree:
             return []
 
         root_value = [root_node.value]
-        left_value = cls.traverse(root_node.left, order)
-        right_value = cls.traverse(root_node.right, order)
+        left_value = cls.depth_traversal(root_node.left, order)
+        right_value = cls.depth_traversal(root_node.right, order)
 
         if order == "pre":
             return root_value + left_value + right_value
@@ -51,21 +51,21 @@ class BinaryTree:
         Returns a list of the values of the binary tree with the pre-order method. root >> left >> right
         """
 
-        return self.traverse(self.root, "pre")
+        return self.depth_traversal(self.root, "pre")
 
     def in_order(self):
         """
         Returns a list of the values of the binary tree with the in-order method. left >> root >> right
         """
 
-        return self.traverse(self.root, "in")
+        return self.depth_traversal(self.root, "in")
 
     def post_order(self):
         """
         Returns a list of the values of the binary tree with the post-order method. left >> right >> root
         """
 
-        return self.traverse(self.root, "post")
+        return self.depth_traversal(self.root, "post")
 
 class Node:
     """
