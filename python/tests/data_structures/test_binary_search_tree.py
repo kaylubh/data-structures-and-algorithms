@@ -72,11 +72,11 @@ def test_not_contains(tree):
     assert actual == expected
 
 # @pytest.mark.skip("TODO")
-# def test_not_contains_empty():
-#     tree = BinarySearchTree()
-#     actual = tree.contains(100)
-#     expected = False
-#     assert actual == expected
+def test_not_contains_empty():
+    tree = BinarySearchTree()
+    actual = tree.contains(100)
+    expected = False
+    assert actual == expected
 
 
 @pytest.fixture
