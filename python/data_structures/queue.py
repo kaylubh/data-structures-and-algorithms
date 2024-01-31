@@ -63,7 +63,7 @@ class Queue:
 
     def is_empty(self):
         """
-        Returns a boolean indicating whether the queue is empty. True for not empty and False for empty.
+        Returns a boolean indicating whether the queue is empty.
         """
 
         return self.front == None
