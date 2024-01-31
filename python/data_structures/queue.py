@@ -32,7 +32,7 @@ class Queue:
 
     def dequeue(self):
         """
-        Dequeues (removes) the node at the front of the queue. Returns the dequeued node.
+        Dequeues (removes) the node at the front of the queue. Returns the dequeued node value.
         """
 
         # exceptions
