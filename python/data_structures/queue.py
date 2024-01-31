@@ -32,7 +32,7 @@ class Queue:
 
     def dequeue(self):
         """
-        Dequeues (removes) the node at the front of the queue. Returns the dequeued node.
+        Dequeues (removes) the node at the front of the queue. Returns the dequeued node value.
         """
 
         # exceptions
@@ -63,7 +63,7 @@ class Queue:
 
     def is_empty(self):
         """
-        Returns a boolean indicating whether the queue is empty. True for not empty and False for empty.
+        Returns a boolean indicating whether the queue is empty.
         """
 
         return self.front == None
