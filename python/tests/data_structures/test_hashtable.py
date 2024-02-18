@@ -55,6 +55,23 @@ def test_bucket_collision():
     expected = 'the beginning of a letter'
     assert actual == expected
 
+### test has method ###
+# @pytest.mark.skip("TODO")
+def test_has():
+    hashtable = Hashtable()
+    hashtable.set("apple", "Used for apple sauce")
+    actual = hashtable.has("apple")
+    expected = True
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_has_not():
+    hashtable = Hashtable()
+    hashtable.set("apple", "Used for apple sauce")
+    actual = hashtable.has("pineapple")
+    expected = False
+    assert actual == expected
+
 @pytest.mark.skip("TODO")
 def test_internals():
     hashtable = Hashtable(1024)

@@ -64,10 +64,25 @@ class Hashtable:
         # if collision but no matching key
         return None
 
-    def has(self):
+    def has(self, key):
         """
 
         """
+
+        index = self._hash(key)
+        bucket = self._buckets[index]
+
+        # check keys for match
+        if bucket:
+            current = bucket.head
+            while current:
+                current_drop = current.value
+                if current_drop[0] == key:
+                    return True
+                current = current.next
+
+        # default if no matching keys found
+        return False
 
     def keys(self):
         """
