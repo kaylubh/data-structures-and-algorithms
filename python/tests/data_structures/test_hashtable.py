@@ -72,6 +72,39 @@ def test_has_not():
     expected = False
     assert actual == expected
 
+### test keys and values methods ###
+# @pytest.mark.skip("TODO")
+def test_keys_list():
+    hashtable = Hashtable()
+    hashtable.set("apple", "Used for apple sauce")
+    hashtable.set('orange', 'used for orange juice')
+    actual = hashtable.keys()
+    expected = ['apple', 'orange']
+    assert sorted(actual) == sorted(expected)
+
+# @pytest.mark.skip("TODO")
+def test_keys_list_empty():
+    hashtable = Hashtable()
+    actual = hashtable.keys()
+    expected = []
+    assert actual == expected
+
+# @pytest.mark.skip("TODO")
+def test_values_list():
+    hashtable = Hashtable()
+    hashtable.set("apple", "Used for apple sauce")
+    hashtable.set('orange', 'used for orange juice')
+    actual = hashtable.values()
+    expected = ['Used for apple sauce', 'used for orange juice']
+    assert sorted(actual) == sorted(expected)
+
+# @pytest.mark.skip("TODO")
+def test_values_list_empty():
+    hashtable = Hashtable()
+    actual = hashtable.values()
+    expected = []
+    assert actual == expected
+
 @pytest.mark.skip("TODO")
 def test_internals():
     hashtable = Hashtable(1024)

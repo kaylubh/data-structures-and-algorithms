@@ -89,10 +89,36 @@ class Hashtable:
 
         """
 
+        keys_list = []
+
+        # iterate over buckets and get keys
+        for bucket in self._buckets:
+            if bucket:
+                current = bucket.head
+                while current:
+                    current_drop = current.value
+                    keys_list.append(current_drop[0])
+                    current = current.next
+
+        return keys_list
+
     def values(self):
         """
 
         """
+
+        values_list = []
+
+        # iterate over buckets and get values
+        for bucket in self._buckets:
+            if bucket:
+                current = bucket.head
+                while current:
+                    current_drop = current.value
+                    values_list.append(current_drop[1])
+                    current = current.next
+
+        return values_list
 
     def _hash(self, key):
         """
