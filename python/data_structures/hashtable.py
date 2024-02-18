@@ -3,7 +3,18 @@ from data_structures.linked_list import LinkedList
 
 class Hashtable:
     """
-    Put docstring here
+    A hash table implementation that allows storing key-value pairs.
+
+    Attributes:
+        size (int): The size of the hash table.
+        _buckets (list): The list of buckets used for storing key-value pairs.
+
+    Methods:
+        set(key, value): Inserts or updates a key-value pair in the hash table.
+        get(key): Retrieves the value associated with the given key.
+        has(key): Checks if the given key exists in the hash table.
+        keys(): Returns a list of all the keys in the hash table.
+        values(): Returns a list of all the values in the hash table.
     """
 
     def __init__(self, size=1024):
@@ -12,7 +23,14 @@ class Hashtable:
 
     def set(self, key, value):
         """
+        Set the value for a given key in the hashtable.
 
+        Args:
+            key: The key to set the value for.
+            value: The value to be set.
+
+        Returns:
+            None
         """
 
         drop = [key, value]
@@ -43,7 +61,13 @@ class Hashtable:
 
     def get(self, key):
         """
+        Retrieves the value associated with the given key.
 
+        Args:
+            key: The key to search for in the hashtable.
+
+        Returns:
+            The value associated with the given key, or None if the key is not found.
         """
 
         index = self._hash(key)
@@ -66,7 +90,13 @@ class Hashtable:
 
     def has(self, key):
         """
+        Checks if the hashtable contains a specific key.
 
+        Args:
+            key: The key to check for in the hashtable.
+
+        Returns:
+            True if the key is found in the hashtable, False otherwise.
         """
 
         index = self._hash(key)
@@ -86,7 +116,7 @@ class Hashtable:
 
     def keys(self):
         """
-
+        Returns a list of all the keys in the hashtable.
         """
 
         keys_list = []
@@ -104,7 +134,7 @@ class Hashtable:
 
     def values(self):
         """
-
+        Returns a list of all the values stored in the hashtable.
         """
 
         values_list = []
@@ -122,7 +152,16 @@ class Hashtable:
 
     def _hash(self, key):
         """
+        Hashes the given key and returns the index in the hashtable.
 
+        Args:
+            key (str): The key to be hashed.
+
+        Returns:
+            int: The index in the hashtable.
+
+        Raises:
+            TypeError: If the key is not a string.
         """
 
         if type(key) != str:
