@@ -21,6 +21,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 1. [Tree Breadth First Traversal](/python/docs/tree_breadth_first/README.md)
 1. [Tree FizzBuzz](/python/docs/tree_fizz_buzz/README.md)
 1. [Hashtable](/python/docs/hashtable/README.md)
+1. [Hashtable Repeated Word](/python/docs/hashtable_repeated_word/README.md)
 
 ## Repository Quick Tour and Usage
 
