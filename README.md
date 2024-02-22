@@ -23,6 +23,7 @@ See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-co
 1. [Hashtable](/python/docs/hashtable/README.md)
 1. [Hashtable Repeated Word](/python/docs/hashtable_repeated_word/README.md)
 1. [Tree Intersection](/python/docs/tree_intersection/README.md)
+1. [Hashmap Left Join](/python/docs/hashtable_left_join/README.md)
 
 ## Repository Quick Tour and Usage
 
